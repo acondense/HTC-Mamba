@@ -39,6 +39,7 @@ export default class CoughAndCold extends Component {
 				<Text>- Inhaling steam can also relieve congestion and coughing </Text>
 				<Text>- Suck menthol sweets to ease sore throats </Text>
 		</View>
+		);
 	}	
 }
 

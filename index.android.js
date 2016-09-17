@@ -17,8 +17,9 @@ import {Scene, Router, Actions} from 'react-native-router-flux';
 // Pages
 import Login from './src/Pages/Login';
 import Main from './src/Pages/Main';
-
+import Add from './src/Pages/Add';
 import SunnyTips from './src/Pages/SunnyTips.js';
+
 import Heatstroke from './src/Pages/Heatstroke.js';
 import Sunburn from './src/Pages/Sunburn.js';
 import SoreEyes from './src/Pages/SoreEyes.js';
@@ -63,6 +64,7 @@ class FloodGo extends Component {
         <Scene key="root">
           <Scene onLoginSuccess={this.setLoggedIn} initial={!this.state.logged} hideNavBar={true} key="login" component={Login} title="Login"/>
           <Scene onPop={this.exitApp} initial={this.state.logged} hideNavBar={true} key="main" component={Main} panHandlers={null} onBack={backPress}/>
+
           <Scene component={SunnyTips} hideNavBar={true} key="sunnyTips" />
           <Scene component={Heatstroke} hideNavBar={true} key="heatStroke" />
           <Scene component={Sunburn} hideNavBar={true} key="sunnyBurn" />
@@ -70,6 +72,10 @@ class FloodGo extends Component {
           <Scene component={CougnAndCold} hideNavBar={true} key="cghandcld" />
           <Scene component={Rabies} hideNavBar={true} key="rabies" />
           <Scene component={SkinDisease} hideNavBar={true} key="skinDisease" />
+
+          <Scene component={SunnyTips} hideNavBar={true} key="sunnytips" />
+          <Scene component={Add} hideNavBar={true} key="add" />
+
         </Scene>
       </Router>
     );

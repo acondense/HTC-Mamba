@@ -33,6 +33,7 @@ export default class SoreEyes extends Component {
 				<Text>- Protect the eye </Text>
 				<Text>- Get medical help as soon as possible </Text>
 		</View>
+		);
 	}	
 }
 

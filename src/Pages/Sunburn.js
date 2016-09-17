@@ -40,6 +40,7 @@ export default class Sunburn extends Component {
 				<Text>- Don't break small blisters</Text>
 				<Text>-  If needed, take a pain reliever medicine</Text>
 		</View>
+		);
 	}	
 }
 

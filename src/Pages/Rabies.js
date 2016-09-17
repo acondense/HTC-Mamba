@@ -38,6 +38,7 @@ export default class Rabies extends Component {
 				<Text>- Go to the nearest hospital and explain that you've been bitten </Text>
 				<Text>- Injection of rabies immunoglobulin as well as rabies vaccine </Text>
 		</View>
+		);
 	}	
 }
 

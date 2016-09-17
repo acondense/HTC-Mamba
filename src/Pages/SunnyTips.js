@@ -37,6 +37,7 @@ export default class SunnyTips extends Component {
         <Text>Tips for sunny days</Text>
 
         <View style={styles.tipsRow}>
+<<<<<<< HEAD
           <DiseaseIcon imgsrc={require('../assets/Disease Pictures/cholera.jpg')} title="Cholera" />
           <DiseaseIcon imgsrc={require('../assets/Disease Pictures/hepa.jpg')} title="Hepatitis A" />
         </View>
@@ -47,6 +48,14 @@ export default class SunnyTips extends Component {
         <View style={styles.tipsRow}>
           <DiseaseIcon imgsrc={require('../assets/Disease Pictures/leptospirosis.jpg')} title="Leptospirosis" />
           <DiseaseIcon imgsrc={require('../assets/Disease Pictures/dengue.jpg')} title="Dengue" />
+=======
+          <DiseaseIcon imgsrc={require('../assets/user.jpg')} title="Malaria" />
+          <DiseaseIcon imgsrc={require('../assets/user.jpg')} title="Leptospyrosis" />
+        </View>
+        <View style={styles.tipsRow}>
+          <DiseaseIcon imgsrc={require('../assets/user.jpg')} title="Happiness" />
+          <DiseaseIcon imgsrc={require('../assets/user.jpg')} title="Sakit sa puso" />
+>>>>>>> 0caae1172bb295a56f9e602b9e377f8b845d41f4
         </View>
 
       </View>

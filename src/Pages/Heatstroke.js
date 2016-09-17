@@ -45,7 +45,8 @@ export default class Heatstroke extends Component {
 				<Text>- Apply ice packs to patient's armpits, groin, neck, and back</Text>
 				<Text>- Immerse the patient in a shower or tub of cool water, or an ice bath.</Text>
 		</View>
-		
+		);
+	}	
 }
 
 const styles = StyleSheet.create({

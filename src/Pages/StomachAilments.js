@@ -36,6 +36,7 @@ export default class StomachAilments extends Component {
 				<Text>- Brew a cup of peppermint or spearmint tea </Text>
 				<Text>- Take apple cider </Text>
 		</View>
+		);
 	}	
 }
 
