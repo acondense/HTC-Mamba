@@ -25,7 +25,6 @@ export default class Monitor extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={{fontSize: 18}}>Team Instinct!</Text>
         <Text style={styles.name}>Jordan Michael Bolinas</Text>
         <Text>60 y/o</Text>
         <Text>120/80</Text>
@@ -66,6 +65,7 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 24,
     fontWeight: "500",
+    color: 'black'
   },
   places: {
     alignItems: 'flex-start',

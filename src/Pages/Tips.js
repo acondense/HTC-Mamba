@@ -12,6 +12,11 @@ import Button from 'react-native-button';
 import {Actions} from 'react-native-router-flux';
 
 export default class Tips extends Component {
+
+  _gotoSunnyTips() {
+    Actions.sunnyTips();
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -22,7 +27,7 @@ export default class Tips extends Component {
         <Button
           style={styles.category}
           styleDisabled={{color: 'red'}}
-          onPress={() => this._handlePress()}>
+          onPress={() => this._gotoSunnyTips()}>
           <Image source={require('../assets/sunny.jpg')} style={styles.categoryBG}>
             <Text style={styles.buttonTitle}>Sunny</Text>
           </Image>
@@ -60,7 +65,7 @@ const styles = StyleSheet.create({
   categoryBG: {
     height: buttonHeight,
     flexDirection: 'row',
-    backgroundColor: 'blue',
+    // backgroundColor: 'blue',
     flex: 1,
     padding: 50,
   },

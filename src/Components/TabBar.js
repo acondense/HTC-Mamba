@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     borderTopColor: 'rgba(255,0,0,0.05)',
   },
   activeTab: {
-    color: "#1abc9c",
+    color: "white",
   },
   inactiveTab: {
     color: "gray"

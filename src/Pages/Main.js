@@ -34,8 +34,8 @@ export default class Main extends Component {
 
   render() {
     return (
-      <ScrollableTabView tabBarPosition='top' renderTabBar={() => <TabBar isScrollDown={this.state.isScrollDown} />}>
-        <Monitor tabLabel="Monitor" />
+      <ScrollableTabView style={styles.bar} tabBarPosition='top' renderTabBar={() => <TabBar isScrollDown={this.state.isScrollDown} />}>
+        <Monitor tabLabel="Monitor" style={{fontSize: '20'}}/>
         <Tips tabLabel="Tips" />
       </ScrollableTabView>
     );
@@ -59,4 +59,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  bar: {
+    backgroundColor: '#750B0D'
+  }
 });
