@@ -14,7 +14,7 @@ import {
 import {Scene, Router, Actions, ActionConst} from 'react-native-router-flux';
 
 
-import quickstart froom '../tests/quickstart.js';
+// import quickstart from '../tests/quickstart.js';
 
 
 export default class Login extends Component {

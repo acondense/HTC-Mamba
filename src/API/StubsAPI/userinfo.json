@@ -1,0 +1,21 @@
+{
+	"username": "Juan Dela Cruz",
+	"email": "juan@gmail.com",
+	"employees": [
+		{
+			"name": "Ariel Conde",
+			"location": "Manila, PH",
+			"hasSended": true,
+		},
+		{
+			"name": "Jed Garcia",
+			"location": "Manila, PH",
+			"hasSended": true,
+		},
+		{
+			"name": "Red Periabras",
+			"location": "Edsa QC, PH",
+			"hasSended": true,
+		},
+	]
+}

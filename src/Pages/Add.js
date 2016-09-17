@@ -7,39 +7,24 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import {Scene, Router, Actions} from 'react-native-router-flux';
 import Button from 'react-native-button';
+import {Actions} from 'react-native-router-flux';
 
-import userinfo from '../API/StubsAPI/userinfo';
-
-class PlacesItem extends Component {
-  render() {
-    return (
-      <TouchableOpacity style={styles.placeitem}>
-        <Text style={styles.placename}>{this.props.empname}</Text>
-        <Text>{this.props.location}</Text>
-      </TouchableOpacity>
-    );
-  }
-}
-
-export default class Monitor extends Component {
+export default class Add extends Component {
 
   _handlePress() {
-    Actions.add();
+    Actions.main({
+      newEmp: {
+        name: "John Olivo",
+        location: "Sta. Mesa",
+      }
+    })
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.name}>{userinfo.username}</Text>
-        <View style={styles.places}>
-          <Text>Your employees</Text>
-          {userinfo.employees.map(function(emp, index) {
-            return (<PlacesItem key={index} location={emp.location} time="15:00" empname={emp.name} />);
-          })}
-        </View>
-
+        <Text>Add a new employee</Text>
         <TouchableOpacity
           style={styles.editBtn}
           styleDisabled={{color: 'red'}}
