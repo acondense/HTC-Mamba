@@ -17,8 +17,10 @@ export default class Add extends Component {
       newEmp: {
         name: "John Olivo",
         location: "Sta. Mesa",
-      }
-    })
+        hasSended: "false",
+      },
+      hasNew: true
+    });
   }
 
   render() {

@@ -25,6 +25,20 @@ class PlacesItem extends Component {
 
 export default class Monitor extends Component {
 
+  constructor() {
+    super();
+
+    var arrEmp = userinfo.employees;
+    if (this.props.hasNew) {
+      arrEmp.push(this.props.newEmp);
+    }
+
+    this.state = {
+      employees: arrEmp,
+    }
+
+  }
+
   _handlePress() {
     Actions.add();
   }
@@ -35,7 +49,7 @@ export default class Monitor extends Component {
         <Text style={styles.name}>{userinfo.username}</Text>
         <View style={styles.places}>
           <Text>Your employees</Text>
-          {userinfo.employees.map(function(emp, index) {
+          {this.state.employees.map(function(emp, index) {
             return (<PlacesItem key={index} location={emp.location} time="15:00" empname={emp.name} />);
           })}
         </View>
