@@ -55,7 +55,7 @@ class FloodGo extends Component {
       <Router>
         <Scene key="root">
           <Scene onLoginSuccess={this.setLoggedIn} initial={!this.state.logged} hideNavBar={true} key="login" component={Login} title="Login"/>
-          <Scene onPop={this.exitApp} initial={this.state.logged} hideNavBar={true} key="main" component={Main} panHandlers={null} onBack={backPress}/>
+          <Scene onPop={this.exitApp} initial={this.state.logged} hideNavBar={true} key="main" component={Main} panHandlers={null} onBack={backPress} hasNew={false}/>
           <Scene component={SunnyTips} hideNavBar={true} key="sunnytips" />
           <Scene component={Add} hideNavBar={true} key="add" />
         </Scene>

@@ -29,10 +29,6 @@ export default class Monitor extends Component {
     super();
 
     var arrEmp = userinfo.employees;
-    if (this.props.hasNew) {
-      arrEmp.push(this.props.newEmp);
-    }
-
     this.state = {
       employees: arrEmp,
     }
