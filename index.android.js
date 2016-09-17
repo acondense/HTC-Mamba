@@ -18,6 +18,8 @@ import {Scene, Router, Actions} from 'react-native-router-flux';
 import Login from './src/Pages/Login';
 import Main from './src/Pages/Main';
 
+import SunnyTips from './src/Pages/SunnyTips.js';
+
 class FloodGo extends Component {
 
   constructor(props) {
@@ -54,6 +56,7 @@ class FloodGo extends Component {
         <Scene key="root">
           <Scene onLoginSuccess={this.setLoggedIn} initial={!this.state.logged} hideNavBar={true} key="login" component={Login} title="Login"/>
           <Scene onPop={this.exitApp} initial={this.state.logged} hideNavBar={true} key="main" component={Main} panHandlers={null} onBack={backPress}/>
+          <Scene component={SunnyTips} hideNavBar={true} key="sunnytips" />
         </Scene>
       </Router>
     );

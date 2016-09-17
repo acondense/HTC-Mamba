@@ -14,6 +14,9 @@ import {
 import {Scene, Router, Actions, ActionConst} from 'react-native-router-flux';
 
 
+import quickstart froom '../tests/quickstart.js';
+
+
 export default class Login extends Component {
   render() {
     const goToPageTwo = () => {

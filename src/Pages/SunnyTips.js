@@ -11,36 +11,40 @@ import {
 import Button from 'react-native-button';
 import {Actions} from 'react-native-router-flux';
 
-export default class Tips extends Component {
+class DiseaseIcon extends Component {
+  render() {
+    return (
+      <TouchableOpacity style={styles.icon}>
+        <Image source={this.props.imgsrc} style={styles.diseaseIcon} />
+        <Text>{this.props.title}</Text>
+      </TouchableOpacity>
+    );
+  }
+}
 
-  _gotoSunnyTips() {
-    Actions.sunnytips();
+export default class SunnyTips extends Component {
+
+  _handlePressX() {
+    Actions.pop();
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Safety Tips
-        </Text>
-        <View>
-        <Button
-          style={styles.category}
-          styleDisabled={{color: 'red'}}
-          onPress={() => this._gotoSunnyTips()}>
-          <Image source={require('../assets/sunny.jpg')} style={styles.categoryBG}>
-            <Text style={styles.buttonTitle}>Sunny</Text>
-          </Image>
+        <Button onPress={() => this._handlePressX()}>
+          <Text>X</Text>
         </Button>
-        <Button
-          style={styles.category}
-          styleDisabled={{color: 'red'}}
-          onPress={() => this._handlePress()}>
-          <Image source={require('../assets/rainy.jpg')} style={styles.categoryBG}>
-            <Text style={styles.buttonTitle}>Rainy</Text>
-          </Image>
-        </Button>
+        <Text>Tips for sunny days</Text>
+
+        <View style={styles.tipsRow}>
+          <DiseaseIcon imgsrc={require('../assets/user.jpg')} title="Malaria" />
+          <DiseaseIcon imgsrc={require('../assets/user.jpg')} title="Leptospyrosis" />
         </View>
+        <View style={styles.tipsRow}>
+          <DiseaseIcon imgsrc={require('../assets/user.jpg')} title="Happiness" />
+          <DiseaseIcon imgsrc={require('../assets/user.jpg')} title="Sakit sa puso" />
+        </View>
+
       </View>
     );
   }
@@ -79,6 +83,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+  diseaseIcon: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+  },
+  icon: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  tipsRow:{
+    flexDirection: 'row',
   },
 });
 
