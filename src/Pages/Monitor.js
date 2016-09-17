@@ -42,14 +42,10 @@ export default class Monitor extends Component {
   render() {
     return (
       <View style={styles.container}>
-<<<<<<< HEAD
         <Text style={styles.name}>Jordan Michael Bolinas</Text>
         <Text>60 y/o</Text>
         <Text>120/80</Text>
-
-=======
         <Text style={styles.name}>{userinfo.username}</Text>
->>>>>>> 0caae1172bb295a56f9e602b9e377f8b845d41f4
         <View style={styles.places}>
           <Text>Your employees</Text>
           {this.state.employees.map(function(emp, index) {

@@ -40,7 +40,8 @@ export default class SkinDisease extends Component {
 				<Text>- Antihistamines </Text>
 				<Text>- Targeted prescription medications </Text>
 				<Text>- Medicated creams and ointments </Text>
-		</view>
+		</View>
+		);
 	}	
 }
 

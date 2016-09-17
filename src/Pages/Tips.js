@@ -14,11 +14,7 @@ import {Actions} from 'react-native-router-flux';
 export default class Tips extends Component {
 
   _gotoSunnyTips() {
-<<<<<<< HEAD
     Actions.sunnyTips();
-=======
-    Actions.sunnytips();
->>>>>>> 0caae1172bb295a56f9e602b9e377f8b845d41f4
   }
 
   render() {
