@@ -32,14 +32,6 @@ export default class Tips extends Component {
             <Text style={styles.buttonTitle}>Sunny</Text>
           </Image>
         </Button>
-        <Button
-          style={styles.category}
-          styleDisabled={{color: 'red'}}
-          onPress={() => this._handlePress()}>
-          <Image source={require('../assets/rainy.jpg')} style={styles.categoryBG}>
-            <Text style={styles.buttonTitle}>Rainy</Text>
-          </Image>
-        </Button>
         </View>
       </View>
     );

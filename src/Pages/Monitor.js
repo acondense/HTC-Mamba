@@ -42,9 +42,7 @@ export default class Monitor extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.name}>Jordan Michael Bolinas</Text>
-        <Text>60 y/o</Text>
-        <Text>120/80</Text>
+        <Text>Hello</Text>
         <Text style={styles.name}>{userinfo.username}</Text>
         <View style={styles.places}>
           <Text>Your employees</Text>

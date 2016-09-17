@@ -37,16 +37,16 @@ export default class SunnyTips extends Component {
         <Text>Tips for sunny days</Text>
 
         <View style={styles.tipsRow}>
-          <DiseaseIcon imgsrc={require('../assets/Disease Pictures/cholera.jpg')} title="Cholera" />
-          <DiseaseIcon imgsrc={require('../assets/Disease Pictures/hepa.jpg')} title="Hepatitis A" />
+          <DiseaseIcon imgsrc={require('../assets/diseasepics/cholera.jpg')} title="Cholera" />
+          <DiseaseIcon imgsrc={require('../assets/diseasepics/hepa.jpg')} title="Hepatitis A" />
         </View>
         <View style={styles.tipsRow}>
-          <DiseaseIcon imgsrc={require('../assets/Disease Pictures/typhoid.jpeg')} title="Typhoid Fever" />
-          <DiseaseIcon imgsrc={require('../assets/Disease Pictures/flu.jpg')} title="Influenza" />
+          <DiseaseIcon imgsrc={require('../assets/diseasepics/typhoid.jpeg')} title="Typhoid Fever" />
+          <DiseaseIcon imgsrc={require('../assets/diseasepics/flu.jpg')} title="Influenza" />
         </View>
         <View style={styles.tipsRow}>
-          <DiseaseIcon imgsrc={require('../assets/Disease Pictures/leptospirosis.jpg')} title="Leptospirosis" />
-          <DiseaseIcon imgsrc={require('../assets/Disease Pictures/dengue.jpg')} title="Dengue" />
+          <DiseaseIcon imgsrc={require('../assets/diseasepics/leptospirosis.jpg')} title="Leptospirosis" />
+          <DiseaseIcon imgsrc={require('../assets/diseasepics/dengue.jpg')} title="Dengue" />
         </View>
 
       </View>

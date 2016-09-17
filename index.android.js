@@ -58,7 +58,7 @@ class FloodGo extends Component {
     const backPress = () => {
       console.log("Exit");
       return;
-    }
+    }   
     return (
       <Router>
         <Scene key="root">
