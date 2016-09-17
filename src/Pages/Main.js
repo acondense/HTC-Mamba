@@ -39,7 +39,7 @@ export default class Main extends Component {
         <Monitor tabLabel="Monitor" style={{fontSize: '20'}}/>
 
       <ScrollableTabView tabBarPosition='top' renderTabBar={() => <TabBar isScrollDown={this.state.isScrollDown} />}>
-        <Monitor tabLabel="Monitor" newEmp={this.props.hasNew ? this.props.newEmp : null} hasNew={this.props.hasNew} />
+        <Monitor tabLabel="Monitor" newEmp={this.props.hasNew ? this.props.newEmp : null} hasNew={false} />
         <Tips tabLabel="Tips" />
       </ScrollableTabView>
     );
