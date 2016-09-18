@@ -6,6 +6,7 @@ import {
   View,
   TouchableOpacity,
   Dimensions,
+  TextInput,
 } from 'react-native';
 import Button from 'react-native-button';
 import {Actions} from 'react-native-router-flux';
@@ -26,7 +27,14 @@ export default class Add extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Add a new employee</Text>
+        <Text style={{fontSize: 20, fontWeight: "500", color: "#e74c3c", marginTop: 50}}>Add a new employee</Text>
+        <TextInput
+        style={{height: 60, width: 300, borderColor: 'white', borderWidth: 1, fontSize: 16, fontWeight: "700", color: "white"}}
+        placeholder="Employee name"/>
+        <TextInput
+        style={{height: 60, width: 300, borderColor: 'white', borderWidth: 1, fontSize: 16, fontWeight: "700"}}
+        placeholder="Enter Location"
+        secureTextEntry={true} />
         <TouchableOpacity
           style={styles.editBtn}
           styleDisabled={{color: 'red'}}

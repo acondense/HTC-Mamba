@@ -17,11 +17,15 @@ export default class Tips extends Component {
     Actions.sunnyTips();
   }
 
+  _gotoRainyTips() {
+    Actions.rainyTips();
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Safety Tips
+        <Text style={{fontSize: 20, fontWeight: "500", color: "#e74c3c", margin: 20}}>
+          Tips on Diseases
         </Text>
         <View>
         <Button
@@ -30,6 +34,14 @@ export default class Tips extends Component {
           onPress={() => this._gotoSunnyTips()}>
           <Image source={require('../assets/sunny.jpg')} style={styles.categoryBG}>
             <Text style={styles.buttonTitle}>Sunny</Text>
+          </Image>
+        </Button>
+        <Button
+          style={styles.category}
+          styleDisabled={{color: 'red'}}
+          onPress={() => this._gotoRainyTips()}>
+          <Image source={require('../assets/rainy.jpg')} style={styles.categoryBG}>
+            <Text style={styles.buttonTitle}>Rainy</Text>
           </Image>
         </Button>
         </View>

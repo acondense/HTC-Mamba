@@ -6,6 +6,7 @@ import {
   View,
   TouchableOpacity,
   Dimensions,
+  Image,
 } from 'react-native';
 import {Scene, Router, Actions} from 'react-native-router-flux';
 import Button from 'react-native-button';
@@ -16,8 +17,13 @@ class PlacesItem extends Component {
   render() {
     return (
       <TouchableOpacity style={styles.placeitem}>
-        <Text style={styles.placename}>{this.props.empname}</Text>
-        <Text>{this.props.location}</Text>
+        <View style={styles.names}>
+          <Text style={styles.placename}>{this.props.empname}</Text>
+          <Text>{this.props.location}</Text>
+        </View>
+        <View>
+          <Text style={{color: "#e74c3c", margin: 5, fontWeight: "500"}}>X</Text>
+        </View>
       </TouchableOpacity>
     );
   }
@@ -42,10 +48,12 @@ export default class Monitor extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hello</Text>
+        <TouchableOpacity style={styles.icon}>
+          <Image source={require('../assets/dan.jpg')} style={styles.diseaseIcon} />
+        </TouchableOpacity>
         <Text style={styles.name}>{userinfo.username}</Text>
         <View style={styles.places}>
-          <Text>Your employees</Text>
+          <Text style={{color: '#e74c3c', fontSize: 16, fontWeight: "500"}}>Your employees</Text>
           {this.state.employees.map(function(emp, index) {
             return (<PlacesItem key={index} location={emp.location} time="15:00" empname={emp.name} />);
           })}
@@ -71,6 +79,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
+  diseaseIcon: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    borderColor: "#e74c3c",
+    borderWidth: 3,
+    marginTop: 20,
+  },
+  icon: {
+    flex: 1,
+    alignItems: 'center',
+  },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
@@ -86,7 +106,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     margin: 20,
     width: placeswidth,
-    height: 280,
+    height: 250,
   },
   placename: {
     fontSize: 18,
@@ -94,6 +114,16 @@ const styles = StyleSheet.create({
   },
   placeitem: {
     marginTop: 5,
+    flexDirection: 'row',
+    alignItems: 'stretch',
+  },
+  names: {
+    width: 250,
+    marginRight: 50,
+  },
+  xBtn: {
+    fontSize: 20,
+    fontWeight: "900",
   },
   editBtn: {
     borderColor: '#e74c3c',

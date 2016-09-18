@@ -73,7 +73,7 @@ export default class Profile extends Component {
       )
     } else {
       return (
-        <Animatable.View duration={300} animation="slideInDown">
+        <Animatable.View style={styles.tabBar} duration={300} animation="slideInDown">
         <View style={this.props.isScrollDown ? styles.container : styles.containerOpen}>
           {this.props.tabs.map((tab, i) => {
             return <TouchableOpacity key={tab} onPress={() => this.props.goToPage(i)} style={styles.tab}>
@@ -103,6 +103,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     paddingTop: 5,
   },
+  tabBar: {
+    backgroundColor: "#e74c3c",
+  },
   container: {
     borderTopWidth: 1,
     borderTopColor: "#1abc9c",
@@ -131,9 +134,11 @@ const styles = StyleSheet.create({
   },
   activeTab: {
     color: "white",
+    fontSize: 16,
   },
   inactiveTab: {
-    color: "gray"
+    color: "gray",
+    fontSize: 16,
   },
   tab: {
     flex: 1,

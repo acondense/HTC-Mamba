@@ -14,14 +14,14 @@ export default class Summer extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Climate Health
+          Sunny tips
         </Text>
         
         <Button
           style={{fontSize: 20, color: 'green'}}
           styleDisabled={{color: 'red'}}
           onPress={() => this._handlePress()}>
-          GET STARTED
+          Soon!
         </Button>
       </View>
     );
